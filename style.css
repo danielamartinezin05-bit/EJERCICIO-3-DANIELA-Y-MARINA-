@@ -1,0 +1,472 @@
+/* --- RESET GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- SECCIÓN HERO --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)),
+    url('portada.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 8%;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+    margin: 0 auto;
+}
+
+.nav-right {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-pill {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 25px;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-pill:hover {
+    background-color: white;
+    color: #8fb1c6;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- TEXTO HERO --- */
+.hero-text h1 {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 180px;
+    color: white;
+    line-height: 0.8;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-text h2 {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 6px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* --- INTRO AZUL --- */
+.contenedor-azul {
+    background-color: #9abfd3;
+    color: white;
+    text-align: center;
+    padding: 120px 15%;
+}
+
+.contenedor-azul h3 {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 80px;
+    margin-bottom: 25px;
+}
+
+/* --- ACTIVIDADES --- */
+.actividades {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.titulo-actividades {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 60px;
+    color: #8fb1c6;
+    margin-bottom: 50px;
+}
+
+.grid-actividades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tarjeta-actividad {
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.imagen-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.imagen-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-actividad:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(143, 177, 198, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tarjeta-actividad:hover .overlay {
+    opacity: 1;
+}
+
+/* --- PLAZAS --- */
+.seccion-plazas {
+    background-color: #9abfd3;
+    padding: 100px 5%;
+    text-align: center;
+    color: white;
+}
+
+.titulo-plazas {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 90px;
+    margin-bottom: 60px;
+}
+
+.grid-plazas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.plaza-item {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plaza-item img {
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+.plaza-item p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.plaza-item:hover {
+    transform: scale(1.2);
+}
+
+/* --- PALERMO --- */
+body.palermo-body {
+    background-color: #507095;
+    color: white;
+}
+
+.palermo-body .navbar {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+}
+
+.palermo-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.palermo-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.palermo-img {
+    width: 100%;
+}
+
+.palermo-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 150px;
+    font-weight: 400;
+}
+
+.palermo-text {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.palermo-banner {
+    width: 100%;
+    display: block;
+}
+
+/* --- SECCIONES COMUNES CIUDADES (Piazza, Teatro) --- */
+.piazza {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.piazza-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 100px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.piazza-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.piazza-img,
+.piazza-map {
+    width: 100%;
+}
+
+.piazza-text {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.teatro {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.teatro-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+    align-items: center;
+}
+
+.teatro-img {
+    width: 100%;
+}
+
+.teatro-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.teatro-text {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* --- CATANIA --- */
+body.catania-body {
+    background-color: #2c2c2c;
+    color: white;
+    margin: 0;
+}
+
+.catania-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.catania-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.catania-img {
+    width: 100%;
+}
+
+.catania-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 130px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.catania-text {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* --- MESINA --- */
+body.mesina-body {
+    background-color: #1a3c5a;
+    color: white;
+    margin: 0;
+}
+
+.mesina-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+/* --- SIRACUSA --- */
+body.siracusa-body {
+    background-color: #f7e7ce;
+    color: #333;
+    margin: 0;
+}
+
+.siracusa-intro {
+    width: 80%;
+    margin: auto;
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.siracusa-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.siracusa-title {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 110px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 0.9;
+    color: #2c2c2c;
+}
+
+/* --- AGRIGENTO --- */
+body.agrigento-body {
+    background-color: #f4e9d5;
+    color: #2c2c2c;
+    margin: 0;
+}
+
+/* --- CALTANISSETTA --- */
+body.catania-body {
+    background-color: #f7f3ed;
+    color: #333;
+}
+
+/* --- TRAPANI --- */
+body.trapani-body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* --- RAGUSA --- */
+body.ragusa-body {
+    background-color: #fcfaf7;
+    color: #333;
+}
+
+/* --- ENNA --- */
+body.enna-body {
+    background-color: #e3e9ed;
+    color: #2f353b;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: #FFF5E1;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    font-family: 'Libre Bodoni', serif;
+    font-size: 28px;
+    color: #8fb1c6;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer a {
+    margin: 0 10px;
+    color: #FF7F11;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer button {
+    padding: 8px 15px;
+    background-color: #FF7F11;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-legal {
+    margin-top: 40px;
+    font-size: 12px;
+    color: #666;
+}
